@@ -1,31 +1,18 @@
 <h1>Welcome</h1>
 <div class="card">
-<div class="card-body">
-Welcome to "history of the universe", where all your questions will be answered.
-</div>
-</div>
-
-<div class="media">
-<img class="d-flex mr-3" src="https://d30y9cdsu7xlg0.cloudfront.net/png/901434-200.png" alt="Millennium Falcon">
-<div class="media-body">
-  <h5 class="mt-0">user1@email.com asked:</h5>
-  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-  <div><a href="/questions/12" class="btn btn-success btn-sm">View Answers</a></div>
+  <div class="card-body">
+  Welcome to "history of the universe", where all your questions will be answered.
   </div>
 </div>
-<div class="media">
-<img class="d-flex mr-3" src="https://d30y9cdsu7xlg0.cloudfront.net/png/901434-200.png" alt="Millennium Falcon">
-<div class="media-body">
-  <h5 class="mt-0">user3@email.com asked:</h5>
-  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-  <div><a href="/questions/12" class="btn btn-success btn-sm">View Answers</a></div>
+<% @questions.each do |q| %>
+  <div class="media">
+    <img class="d-flex mr-3" src="<%= q.gravatar %>" alt="Gravatar icon">
+    <div class="media-body">
+      <h5 class="mt-0"><%=q.email%> asked:</h5>
+      <%=q.body%>
+      <div>
+        <a href="/questions/12" class="btn btn-success btn-sm">View Answers</a>
+      </div>
+    </div>
   </div>
-</div>
-<div class="media">
-<img class="d-flex mr-3" src="https://d30y9cdsu7xlg0.cloudfront.net/png/901434-200.png" alt="Millennium Falcon">
-<div class="media-body">
-  <h5 class="mt-0">user2@email.com asked:</h5>
-  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-  <div><a href="/questions/12" class="btn btn-success btn-sm">View Answers</a></div>
-  </div>
-</div>
+<% end%>
