@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   get 'about' => 'home#about'
   get 'home/index'
-  post 'questions' => 'home#temp'
+  #post 'questions' => 'home#temp'
   post 'answers' => 'home#temp'
-  get 'questions/:id' => 'home#question'
+  #get 'questions/:id' => 'home#question'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
