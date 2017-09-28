@@ -9,6 +9,7 @@
     <img class="d-flex mr-3" src="<%= q.gravatar %>" alt="Gravatar icon">
     <div class="media-body">
       <h5 class="mt-0"><%=q.email%> asked:</h5>
+      <small>Asked <%= time_ago_in_words q.created_at%> ago</small><br/>
       <%=q.body%>
       <div>
         <a href="/questions/12" class="btn btn-success btn-sm">View Answers</a>
