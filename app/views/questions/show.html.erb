@@ -16,26 +16,16 @@
 
     <%= render 'home/new_answer_form' %>
 
+    <% @answers.each do |answer| %>
     <div class="media">
-      <img class="d-flex mr-3" src="https://d30y9cdsu7xlg0.cloudfront.net/png/901434-200.png" alt="Millennium Falcon">
+      <img class="d-flex mr-3" src="<%= answer.gravatar %>" alt="User Gravatar">
       <div class="media-body">
-        <h5 class="mt-0">User answered:</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        <h5 class="mt-0"><%= answer.email %> answered:</h5>
+        <small>Answered <%= time_ago_in_words answer.created_at%> ago</small><br/>
+        <%=answer.body %>
       </div>
     </div>
-    <div class="media">
-      <img class="d-flex mr-3" src="https://d30y9cdsu7xlg0.cloudfront.net/png/901434-200.png" alt="Millennium Falcon">
-      <div class="media-body">
-        <h5 class="mt-0">User answered:</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-      </div>
-    </div>
-    <div class="media">
-      <img class="d-flex mr-3" src="https://d30y9cdsu7xlg0.cloudfront.net/png/901434-200.png" alt="Millennium Falcon">
-      <div class="media-body">
-        <h5 class="mt-0">User answered:</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-      </div>
-    </div>
+    <% end %>
+
   </div>
 </div>
