@@ -12,7 +12,7 @@
       <small>Asked <%= time_ago_in_words q.created_at%> ago</small><br/>
       <%=q.body%>
       <div>
-        <a href="/questions/12" class="btn btn-success btn-sm">View Answers</a>
+        <a href="<%= question_path(q) %>" class="btn btn-success btn-sm">View Answers</a>
       </div>
     </div>
   </div>
