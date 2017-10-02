@@ -11,12 +11,12 @@
         <%= form_for :answer, url: '/answers', html: { class: 'form-horizontal' } do %>
           <div class="form-group">
             <label for="inputEmail">Email</label>
-            <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required/>
+            <input type="email" name="answer[email]" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required/>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="inputAnswer">Answer</label>
-            <textarea class="form-control" name="input-answer" id="inputAnswer" placeholder="What is the answer?" required></textarea>
+            <textarea class="form-control" name="answer[body]" id="inputAnswer" placeholder="What is the answer?" required></textarea>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
